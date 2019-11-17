@@ -1,0 +1,2 @@
+# eurojackpotgen
+ 
