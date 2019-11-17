@@ -1,2 +1,3 @@
 # eurojackpotgen
  
+Generating Eurojackpot numbers.
