@@ -9,7 +9,6 @@ windowgen.py and .pylintrc is for GUI generation of the numbers with pyqt5.
 
 Installed Packages:
 
-PyQt5      5.13.2
-PyQt5-sip  12.7.0
+PyQt5 - 5.13.2 & PyQt5-sip - 12.7.0
 
 
