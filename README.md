@@ -6,6 +6,7 @@ eurojackpotgen.py is without gui just generation of numbers for your next euroja
 
 windowgen.py and .pylintrc is for GUI generation of the numbers with pyqt5.
 
+windowgen.zip parts is a exe for Windows
 
 Installed Packages:
 
