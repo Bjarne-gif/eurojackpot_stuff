@@ -1,13 +1,20 @@
 #optimized best eurojackpot gen eu west
 from random import sample
 
-mylottonumbers2 = []
-myeurojacknumbers2 = []
+def randomeurojackpotnmbrs():
+    firstfive = []
+    lasttwo = []
+    #first five lotto numbers
+    firstfive = sample(range(1, 49),5)
+    firstfive_sortet = sorted(firstfive)
 
-mylottonumbers2 = sample(range(1, 49),5)
-mylottonumbers2_sortet = sorted(mylottonumbers2)
-print(mylottonumbers2_sortet)
+    #last two bonus numbers
+    lasttwo = sample(range(1, 10),2)
+    lasttwo_sortet = sorted(lasttwo)
 
-myeurojacknumbers2 = sample(range(1, 10),2)
-myeurojacknumbers2_sortet = sorted(myeurojacknumbers2)
-print(myeurojacknumbers2_sortet)
+    #combine all numbers to one var and print
+    randomeurojackpotnmb_sortet = firstfive_sortet + lasttwo_sortet
+    print(randomeurojackpotnmb_sortet)
+
+#start function and generate numbers
+randomeurojackpotnmbrs()
