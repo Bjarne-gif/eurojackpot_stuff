@@ -2,7 +2,7 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 from PyQt5 import QtGui
-import random
+from random import sample
 
 class MyWindow(QMainWindow):
     def __init__(self):
@@ -28,39 +28,24 @@ class MyWindow(QMainWindow):
         self.button.setText("Generiere Zahlen")
         self.button.move(10,200)
         self.button.clicked.connect(self.clickedbutton1)
-    
+
     def clickedbutton1(self):
         self.gennumbers()
-        self.label1.setText(self.mylottonumbers + ' ' + self.euronumbers) ###
+        self.label1.setText(self.mylottonumbers2_sortet + ' ' + self.myeurojacknumbers2_sortet) ###
         self.updatelabel1()
 
     def updatelabel1(self):
         self.label1.adjustSize()
-    
+
     def gennumbers(self):
-        self.mylottonumbers= []
-        self.euronumbers= []
-        #Generate Lottonumbers
-        for x in range (5):
-            self.randnumb = random.randint(1, 49)
-            if self.randnumb not in self.mylottonumbers:
-                self.mylottonumbers.append(self.randnumb)
-            else:
-                self.randnumbifexi = random.randint(1, 49)
-                self.mylottonumbers.append(self.randnumbifexi)
-            self.mylottonumbers.sort()
-        self.mylottonumbers = ' '.join(str(e) for e in self.mylottonumbers) ### Convert the integers for settext
-        
-        # Generate Euronumbers
-        for x in range (2):
-            self.randnumb = random.randint(1, 10)
-            if self.randnumb not in self.euronumbers:
-                self.euronumbers.append(self.randnumb)
-            else:
-                self.randnumbifexi = random.randint(1, 10)
-                self.euronumbers.append(self.randnumbifexi)
-            self.euronumbers.sort()
-        self.euronumbers = ' '.join(str(e) for e in self.euronumbers) ### Convert the integers for settext
+        #Generate 5 LottoNumbers
+        self.mylottonumbers2 = sample(range(1, 49),5)
+        self.mylottonumbers2_sortet = sorted(self.mylottonumbers2)
+        self.mylottonumbers2_sortet = ' '.join(str(e) for e in self.mylottonumbers2_sortet) ### Convert the integers for settext
+        #Generate 2 EuroNumbers
+        self.myeurojacknumbers2 = sample(range(1, 10),2)
+        self.myeurojacknumbers2_sortet = sorted(self.myeurojacknumbers2)    
+        self.myeurojacknumbers2_sortet = ' '.join(str(e) for e in self.myeurojacknumbers2_sortet) ### Convert the integers for settext
 
 def window():
     #main_window
