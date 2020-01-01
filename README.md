@@ -2,9 +2,8 @@
 
 eurojackpotgen.py is without gui just generation of numbers for your next eurojackpot tip.
 
-windowgen.py and .pylintrc is for GUI generation of the numbers with pyqt5.
+windowgen.py is with GUI (PyQt5)
 
-windowgen.zip parts is a exe for Windows
 
 Installed Packages:
 
