@@ -25,29 +25,44 @@ def downloadnumbersoflastyears():
         else:            
             numbersstrip = []
             numbersstrip1 = []
-            i = 0
-            z = 5
+            numbersstriptog = []
 
+            #get nested list of lottonumbers only
+            i = 0
             while i < len(numbers):
                 numbersstrip.append(numbers[i:i+5])
                 i +=7
 
+            #get nested list of eurojackpotnumbers only
+            z = 5
             while z < len(numbers):
                 numbersstrip1.append(numbers[z:z+2])
                 z +=7
 
-            print(numbersstrip)
-            print(numbersstrip1)
+            #get nested list of all values lottonumbers and eurojackpotnumbers in the rigt order
+            y = 1
+            w = 0
+            while y < len(numbers):          
+                numbersstrip.insert(y, numbersstrip1[w])
+                w +=1
+                if w == len(numbersstrip1):
+                    numbersstriptog = numbersstrip
+                    break
+                y +=2
+            print(numbersstriptog)
 
-            # Hier müssen die nested lists zusammengebastelt werden.
-
-            #Rohdaten werden in Dateien gespeichert, es muss noch eingebaut werden das Daten gespeichert werden nur wenn sie nicht schon bestehen.
-            
-            numbers = str(numbers)
+            #safe nested list numbersstriptog in files
+            numbersstriptog = str(numbersstriptog)
             filename = yearofnumbers+".txt"
             f = open(filename,"w")
-            f.write(""+numbers)
+            f.write(""+numbersstriptog)
             f.close()
+            #numbers can be insert to files (raw data)
+            #numbers = str(numbers)
+            #filename = yearofnumbers+".txt"
+            #f = open(filename,"w")
+            #f.write(""+numbers)
+            #f.close()
         x = x+1
 
 downloadnumbersoflastyears()
