@@ -8,7 +8,7 @@ import requests
 def downloadnumbersoflastyears():
     
     #there is only 2012 to 2019 data
-    for x in range(2011, 2020):
+    for x in range(2011, 2021):
 
         print(x)
         yearofnumbers = str(x)
@@ -57,6 +57,7 @@ def downloadnumbersoflastyears():
             f = open(filename,"w")
             f.write(""+numbersstriptog)
             f.close()
+
             #numbers can be insert to files (raw data)
             #numbers = str(numbers)
             #filename = yearofnumbers+".txt"
