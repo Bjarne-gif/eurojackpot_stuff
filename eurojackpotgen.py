@@ -5,11 +5,11 @@ def randomeurojackpotnmbrs():
     firstfive = []
     lasttwo = []
     #first five lotto numbers
-    firstfive = sample(range(1, 49),5)
+    firstfive = sample(range(1, 51),5)
     firstfive_sortet = sorted(firstfive)
 
     #last two bonus numbers
-    lasttwo = sample(range(1, 10),2)
+    lasttwo = sample(range(1, 11),2)
     lasttwo_sortet = sorted(lasttwo)
 
     #combine all numbers to one var and print
