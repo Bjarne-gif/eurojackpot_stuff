@@ -10,3 +10,12 @@ Installed Packages:
 PyQt5 - 5.13.2 & PyQt5-sip - 12.7.0
 
 
+# Download Lottnumbers (downloadsites.py)
+
+downloadsites.py download all lottonumbers from a webpage and generates txt file with all the numbers in nested lists.
+The download is inserted to the directory of the file.
+
+
+Installed Packages:
+
+lxml & urllib & requests
