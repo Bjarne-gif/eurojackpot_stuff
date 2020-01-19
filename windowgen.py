@@ -39,11 +39,11 @@ class MyWindow(QMainWindow):
 
     def gennumbers(self):
         #Generate 5 LottoNumbers
-        self.mylottonumbers2 = sample(range(1, 49),5)
+        self.mylottonumbers2 = sample(range(1, 51),5)
         self.mylottonumbers2_sortet = sorted(self.mylottonumbers2)
         self.mylottonumbers2_sortet = ' '.join(str(e) for e in self.mylottonumbers2_sortet) ### Convert the integers for settext
         #Generate 2 EuroNumbers
-        self.myeurojacknumbers2 = sample(range(1, 10),2)
+        self.myeurojacknumbers2 = sample(range(1, 11),2)
         self.myeurojacknumbers2_sortet = sorted(self.myeurojacknumbers2)    
         self.myeurojacknumbers2_sortet = ' '.join(str(e) for e in self.myeurojacknumbers2_sortet) ### Convert the integers for settext
 
